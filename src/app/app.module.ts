@@ -32,6 +32,8 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { SearchMontreComponent } from './components/search-montre/search-montre.component';
 import { SignupComponent } from './components/signup/signup.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -1,0 +1,29 @@
+<app-search-montre></app-search-montre>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Marque</th>
+            <th scope="col">Description</th>
+            <th scope="col">Display</th>
+            <th scope="col">Edit</th>
+            <th scope="col">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let m of montres">
+            <td>{{m.id}}</td>
+            <td>{{m.name}}</td>
+            <td>{{m.marque}}</td>
+            <td>{{m.description}}</td>
+            <td><button class="btn btn-danger" (click)="display(m)">Display</button></td>
+            <td><button class="btn btn-danger" (click)="edit(m)">Edit</button></td>
+            <td><button class="btn btn-danger" (click)="delete(m)">Delete</button></td>
+
+        </tr>
+    </tbody>
+</table>
+<h4 *ngIf='!montres' class="center">
+    <app-loader></app-loader>
+</h4>

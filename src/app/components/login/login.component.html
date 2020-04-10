@@ -1,0 +1,22 @@
+<div class="container mt_30">
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                {{message}}
+                <div class="">
+                    <div id="contact_form">
+                        <form #montreForm="ngForm" class="bg-light p-5 montre-form" (ngSubmit)='update(montreForm.value)'>
+                            <label for="">Email</label>
+                            <input class="full-with-form  mt_30" type="text" id="loginEmail" [(ngModel)]="loginEmail" name="loginEmail" />
+                            <label for="">Password</label>
+
+                            <input class="full-with-form  mt_30" type="password" id="password" [(ngModel)]="password" name="password" required>
+                            <a (click)="login()" class="btn mt_30" *ngIf="!authService.isLoggedIn">Se connecter</a>
+                            <a (click)="logout()" class="btn mt_30" *ngIf="authService.isLoggedIn">Se déconnecter</a> </form>
+                        <div id="contact_results"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
